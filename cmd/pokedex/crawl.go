@@ -22,9 +22,12 @@ var crawlCmd = &cobra.Command{
 		fmt.Printf("Start crawling data & save to %s file\n", answer.FileType)
 		res := pokedex.Crawl()
 		pokedex.CrawlDetailInfo(res)
-		//fmt.Println(res)
-		for _, p := range res {
-			fmt.Println(*p)
+
+		// save to file
+		if answer.FileType == "json" {
+			pokedex.SaveToJson(res)
+		} else {
+
 		}
 	},
 }

@@ -8,8 +8,8 @@ type Pokemon struct {
 	Image      string  `json:"image"`
 	Types      string  `json:"types"`
 	Species    string  `json:"species"`
-	Height     float32 `json:"height"`
-	Weight     float32 `json:"weight"`
+	Height     float64 `json:"height"`
+	Weight     float64 `json:"weight"`
 	Evolution  string  `json:"evolution"`
 	Weaknesses string  `json:"weaknesses"`
 	HP         int     `json:"hp"`
